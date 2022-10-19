@@ -34,8 +34,11 @@ public class principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         valor1_txt = new javax.swing.JTextField();
         valor2_txt = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        result_txt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 5, true));
 
@@ -50,20 +53,25 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Valor 1");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Valor 2");
 
-        valor1_txt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valor1_txt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        valor2_txt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valor2_txt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         valor2_txt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valor2_txtActionPerformed(evt);
             }
         });
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel4.setText("Resultado");
+
+        result_txt.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,14 +88,20 @@ public class principal extends javax.swing.JFrame {
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valor2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valor1_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(valor2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(valor1_txt, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(result_txt)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +117,11 @@ public class principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(valor2_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(0, 143, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(result_txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,11 +137,12 @@ public class principal extends javax.swing.JFrame {
 
         jPanel1.getAccessibleContext().setAccessibleName("");
 
-        pack();
+        setSize(new java.awt.Dimension(400, 300));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void saida_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saida_btnActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_saida_btnActionPerformed
 
     private void valor2_txtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valor2_txtActionPerformed
@@ -169,7 +188,9 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField result_txt;
     private javax.swing.JButton saida_btn;
     private javax.swing.JTextField valor1_txt;
     private javax.swing.JTextField valor2_txt;
